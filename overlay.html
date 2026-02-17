@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neb's Tracker</title>
+    <link rel="stylesheet" href="overlay-styles.css">
+</head>
+<body>
+    <div class="tracker-container">
+        <div id="follower-widget" class="follower-card">
+            <div class="follower-count-main" id="follower-count-main">1,234</div>
+            <div class="follower-label">Followers</div>
+            <div class="follower-progress">
+                <div id="follower-progress-bar" class="progress-fill"></div>
+            </div>
+            <div class="follower-goal" id="follower-goal-text">Goal: 5K</div>
+        </div>
+
+        <div id="poll-widget" class="poll-card hidden">
+            <div class="poll-header">
+                <h4 id="poll-title">Poll</h4>
+                <span id="poll-time" class="poll-time"></span>
+            </div>
+            <div id="poll-options" class="poll-options-slim"></div>
+        </div>
+    </div>
+
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <script src="twitch-auth.js"></script>
+    <script src="twitch-api.js"></script>
+    <script src="overlay-layout.js"></script>
+</body>
+</html>

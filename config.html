@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neb's Tracker Config</title>
+    <link rel="stylesheet" href="config-styles.css">
+</head>
+<body>
+    <div class="config-container">
+        <h1>Tracker Settings</h1>
+
+        <div class="config-section">
+            <h2>Follower Goal</h2>
+            <input type="number" id="follower-goal-input" placeholder="Enter follower goal" min="0" value="5000">
+            <button onclick="saveFollowerGoal()">Save Goal</button>
+        </div>
+
+        <div class="config-section">
+            <h2>Follower Widget Position</h2>
+            <div class="button-group">
+                <button onclick="setFollowerPosition('top-left')" class="pos-btn">Top Left</button>
+                <button onclick="setFollowerPosition('top-right')" class="pos-btn active">Top Right</button>
+                <button onclick="setFollowerPosition('bottom-left')" class="pos-btn">Bottom Left</button>
+                <button onclick="setFollowerPosition('bottom-right')" class="pos-btn">Bottom Right</button>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h2>Poll Widget Position</h2>
+            <div class="button-group">
+                <button onclick="setPollPosition('top-left')" class="pos-btn active">Top Left</button>
+                <button onclick="setPollPosition('top-right')" class="pos-btn">Top Right</button>
+                <button onclick="setPollPosition('bottom-left')" class="pos-btn">Bottom Left</button>
+                <button onclick="setPollPosition('bottom-right')" class="pos-btn">Bottom Right</button>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h2>Colors & Theme</h2>
+            <div class="color-group">
+                <label>Primary Color</label>
+                <input type="color" id="primary-color" value="#00d4ff">
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h2>Poll Settings</h2>
+            <div class="checkbox-group">
+                <input type="checkbox" id="show-poll-timer" checked>
+                <label for="show-poll-timer">Show Poll Timer</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="enable-poll-effects" checked>
+                <label for="enable-poll-effects">Enable Fighting Effects (2-option polls)</label>
+            </div>
+        </div>
+
+        <button class="save-btn" onclick="saveAllConfig()">Save All Settings</button>
+    </div>
+
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <script src="overlay-config.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1",
+  "version": "1.0.0",
+  "name": "Neb's Tracker",
+  "description": "Real-time follower and poll tracker with customizable glass-like overlays. Display polls and follower counts on your stream with fighting effects for 2-option polls.",
+  "author": "Neb",
+  "views": {
+    "video_overlay": {
+      "file": "overlay.html",
+      "height": 600
+    },
+    "mobile": {
+      "file": "mobile.html",
+      "height": 800
+    }
+  },
+  "config_views": {
+    "broadcaster": {
+      "file": "config.html",
+      "height": 500
+    }
+  },
+  "permissions": [
+    "bits:read",
+    "channel:read:subscriptions",
+    "channel:read:polls",
+    "moderation:read"
+  ],
+  "required_configuration": "broadcaster_only",
+  "oauth_scopes": [
+    "bits:read",
+    "channel:read:subscriptions",
+    "channel:read:polls",
+    "moderation:read",
+    "user:read:follows"
+  ],
+  "tyler_dev_rig": false,
+  "icon_urls": {
+    "100x100": "https://via.placeholder.com/100?text=Neb+Tracker"
+  }
+}

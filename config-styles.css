@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #00d4ff;
+    --bg: #1a1a2e;
+    --text: #ffffff;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.config-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.config-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.config-section h2 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pos-btn {
+    padding: 10px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pos-btn:hover {
+    background: rgba(0, 212, 255, 0.2);
+    border-color: var(--primary);
+}
+
+.pos-btn.active {
+    background: rgba(0, 212, 255, 0.3);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+.color-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.color-group label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.color-group input[type="color"] {
+    width: 50px;
+    height: 40px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.config-section input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.config-section input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.config-section button {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.config-section button:hover {
+    background: rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.checkbox-group label {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+}
